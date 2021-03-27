@@ -1,0 +1,211 @@
+* {
+  font-family: 'Teko', sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+body {
+  background-color: #151418;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  &__title {
+    position: relative;
+    z-index: 5;
+    padding-top: 140px;
+    height: 550px;
+    &_text {
+      margin-top: 40px;
+      font-size: 180px;
+      font-weight: 300;
+      color: #17A1CC;
+      max-width: 650px;
+      line-height: 90%;
+    }
+  }
+  &__cosmonaut {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.missions {
+  position: relative;
+  z-index: 5;
+  &__block {
+    display: flex;
+    margin-top: 20px;
+    padding: 50px 0 60px 50px;
+    background: rgba(34, 36, 43, 0.8);
+    &:last-child {
+      margin-bottom: 160px;
+    }
+    &_label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+      background-color: rgba(23, 161, 204, 0.7);
+    }
+    &_description {
+      max-width: 800px;
+      margin-left: 60px;
+      &-subtitle {
+        font-size: 24px;
+        color: #17a1cc;
+        letter-spacing: 7px;
+      }
+      &-title {
+        margin-top: 16px;
+        font-size: 72px;
+        line-height: 100%;
+        width: 600px;
+      }
+      &-text {
+        margin-top: 40px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 18px;
+        line-height: 140%;
+      }
+      &-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        width: 438px;
+        .date, .time, .rocket {
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          letter-spacing: 2px;
+          line-height: 100%;
+          img {
+            margin-right: 10px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .container {
+    max-width: 800px;
+  }
+  .header {
+    &__title {
+      &_logo {
+        .logo {
+          width: 300px;
+        }
+      }
+      &_text {
+        font-size: 160px;
+      }
+    }
+  }
+  .missions {
+    &__block {
+      &_label {
+        display: none;
+      }
+      &_description {
+        margin-left: 0;
+        padding-right: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 600px;
+  }
+  .header {
+    &__title {
+      height: 400px;
+      &_text {
+        font-size: 140px;
+        width: 400px;
+      }
+    }
+    &__cosmonaut {
+      transform: translateX(11%);
+    }
+  }
+  .missions {
+    &__block {
+      &_description {
+        &-title {
+          width: 480px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 360px;
+  }
+  .header {
+    &__cosmonaut {
+      transform: translateX(26%);
+    }
+  }
+  .missions {
+    &__block {
+      &_description {
+        &-title {
+          width: 340px;
+        }
+        &-text {
+          width: 260px;
+        }
+        &-info {
+          flex-direction: column;
+          .date, .time, .rocket {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 300px;
+  }
+  .header {
+    &__title {
+      height: 300px;
+      .logo {
+        width: 240px;
+      }
+      &_text {
+        font-size: 120px;
+      }
+    }
+    &__cosmonaut {
+      transform: translateX(30%);
+    }
+  }
+  .missions {
+    &__block {
+      padding: 20px 0 40px 20px;
+    }
+  }
+}
